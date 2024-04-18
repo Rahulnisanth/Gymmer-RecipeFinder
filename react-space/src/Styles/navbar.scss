@@ -1,0 +1,113 @@
+.navbar {
+  height: 55px;
+  background-color: var(--background-color);
+  box-shadow: 0 3px 6px var(--shadow-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20vw;
+  position: sticky;
+
+  .nav-logo {
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--primary-color);
+    text-shadow: 0 1px 3px var(--shadow-color);
+    span {
+      color: var(--text-color);
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 3rem;
+    a {
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: var(--text-light);
+      text-transform: uppercase;
+      position: relative;
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        transform: scaleX(0);
+        transition: 0.2s ease-in-out;
+      }
+      &:hover {
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+      &.active {
+        color: var(--primary-color);
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .sidebar-icon {
+    height: 25px;
+    width: 25px;
+    color: var(--text-light);
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+    padding-inline: 1.5rem;
+
+    .nav-links {
+      display: none;
+    }
+
+    .sidebar-icon {
+      display: block;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50%;
+      background-color: var(--background-color);
+      box-shadow: 0 3px 6px var(--shadow-color);
+      z-index: 100;
+      margin-top: 55px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.3s ease-in-out;
+    }
+    .sidebar a {
+      padding: 1rem 1rem;
+      width: 100%;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: var(--text-light);
+      text-transform: uppercase;
+      position: relative;
+      border-left: 0.4rem solid transparent;
+      &.active {
+        border-left: 0.4rem solid var(--primary-color);
+      }
+      &:hover {
+        border-left: 0.4rem solid var(--primary-color);
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+}
