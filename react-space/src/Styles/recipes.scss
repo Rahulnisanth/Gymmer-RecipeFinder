@@ -1,0 +1,62 @@
+.recipe-container {
+  padding: 0 2rem 0 2rem;
+  margin-top: 1rem;
+}
+.previous-search-section {
+  h2 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+  }
+  .previous-searches-container {
+    .search-items {
+      display: inline-block;
+      background-color: var(--primary-color);
+      border-radius: 2rem;
+      color: #fff;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      margin: 0 1rem 1rem 0;
+      box-shadow: 0 3px 6px var(--shadow-color);
+    }
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 50px;
+    width: 100%;
+    margin-top: 2rem;
+    input,
+    .btn {
+      border: 1px solid #4d4d4d;
+      height: 50px;
+    }
+    input {
+      width: 30%;
+      outline: none;
+      font-size: 1.2rem;
+      font-weight: 100;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      box-shadow: 0 3px 6px var(--shadow-color);
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      &:focus {
+        box-shadow: 0 3px 6px var(--shadow-color);
+      }
+    }
+    @media (max-width: 750px) {
+      input {
+        width: 90%;
+        font-size: 1rem;
+      }
+    }
+    .btn {
+      padding: 0.5rem 0.5rem;
+      width: 50px;
+      background-color: var(--primary-color);
+      color: #fff;
+      box-shadow: 0 3px 6px var(--shadow-color);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 // Components :
 import NavBar from "./Components/Navbar/NavBar";
 import Home from "./Components/Home/Home";
-import Recipes from "./Components/Recipes/RecipeList";
+import Recipes from "./Components/Recipes/Recipes";
 import Settings from "./Components/Settings/Settings";
 import Footer from "./Components/Footer/Footer";
 
@@ -20,7 +20,7 @@ function App() {
         <Route path="/recipes" element={<Recipes />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }
