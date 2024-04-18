@@ -1,8 +1,7 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 // Styles :
 import "../../../Styles/hero.scss";
-// Sample-images :
-import Data from "../../Recipes/Data";
 const Hero = () => {
   return (
     <div className="overlay">
@@ -21,18 +20,7 @@ const Hero = () => {
         </p>
         <button className="__button">Explore Recipes</button>
       </div>
-      <div className="grid__container">
-        {Data.map((data) => {
-          return (
-            <img
-              className="images"
-              src={data.image}
-              alt={data.title}
-              key={data.id}
-            ></img>
-          );
-        })}
-      </div>
+      <div className="grid__container"></div>
     </div>
   );
 };
