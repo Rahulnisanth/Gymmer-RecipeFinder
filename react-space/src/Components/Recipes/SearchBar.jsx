@@ -4,7 +4,7 @@ import "../../Styles/recipes.scss";
 // Icons :
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-const PreviousSearch = () => {
+const SearchBar = () => {
   return (
     <>
       <div className="previous-search-section">
@@ -25,4 +25,4 @@ const PreviousSearch = () => {
   );
 };
 
-export default PreviousSearch;
+export default SearchBar;

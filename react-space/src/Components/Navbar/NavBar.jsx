@@ -28,7 +28,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <a className="nav-logo" href="/">
-        F<span>oo</span>dies
+        Food<span>yFreaks.</span>
       </a>
       {/* Desktop settings */}
       <div className="nav-links">

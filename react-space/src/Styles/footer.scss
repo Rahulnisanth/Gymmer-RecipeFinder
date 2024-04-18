@@ -1,0 +1,40 @@
+.footer {
+  position: relative;
+  color: var(--primary-color);
+
+  bottom: 0;
+  width: 100%;
+  padding: 1.5rem 5rem;
+  background-color: var(--text-color);
+  box-shadow: 0 3px 6px var(--shadow-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+  }
+  .spanner {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    color: var(--primary-color);
+  }
+  .__right {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+
+    .spanner {
+      padding-right: 0.5rem;
+      color: var(--primary-color);
+    }
+    a {
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 // Micro-components :
-import PreviousSearch from "./PreviousSearch";
+import SearchBar from "./SearchBar";
 import RecipeCard from "./RecipeCard";
 // Styles :
 import "../../Styles/recipes.scss";
@@ -10,7 +10,7 @@ import Data from "./Data";
 const Recipes = () => {
   return (
     <div className="recipe-container">
-      <PreviousSearch />
+      <SearchBar />
       <div className="wrapper">
         {Data.map((data) => {
           return <RecipeCard data={data} key={data.id} />;
