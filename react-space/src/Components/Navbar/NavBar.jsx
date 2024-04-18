@@ -16,10 +16,6 @@ const NavBar = () => {
       name: "Recipes",
       path: "/recipes",
     },
-    {
-      name: "Settings",
-      path: "/settings",
-    },
   ];
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);

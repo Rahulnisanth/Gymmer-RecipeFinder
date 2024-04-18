@@ -32,22 +32,19 @@
   }
 
   &__title {
-    margin-top: -1rem;
+    margin-top: -0.5rem;
+    margin-bottom: -0.2rem;
     padding: 1rem;
     font-size: 1.3rem; /* Optional: Adjust font size */
     text-align: start;
+    color: var(--text-color);
   }
 
   &__description {
     text-align: justify;
+    color: var(--text-light);
     padding: 0 1rem;
     font-size: 1rem; /* Optional: Adjust font size */ /* Optional: Center align the description */
-    span {
-      padding: 2.5rem 0 0 0.5rem;
-      color: var(--primary-color);
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
   }
 
   &__btn {

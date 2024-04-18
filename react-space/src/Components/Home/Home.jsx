@@ -1,9 +1,11 @@
 import React from "react";
+// Styles :
+import "../../Styles/hero.scss";
 // Micro-components :
 import { Culinary, Hero, Quote } from "./Micro-components/control";
 const Home = () => {
   return (
-    <div>
+    <div className="home-container">
       <Hero />
       <Culinary />
       <Quote />

@@ -12,8 +12,7 @@ const RecipeCard = ({ data }) => {
           <img src={image} class="card__tag" alt={title} />
           <h2 className="card__title">{title}</h2>
           <p className="card__description">
-            {description.slice(0, 70)}
-            <span>&#10230;</span>
+            {description.slice(0, 70) + " . . ."}
           </p>
         </div>
         <button className="card__btn">View Recipe</button>
