@@ -5,30 +5,12 @@ import "../../Styles/recipes.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 const PreviousSearch = () => {
-  const searches = [
-    "pizza",
-    "burger",
-    "fries",
-    "pepsi",
-    "coco-cola",
-    "briyani",
-    "ice-cream",
-    "cookies",
-    "juice",
-  ];
   return (
     <>
       <div className="previous-search-section">
-        <h2>Previous Searches</h2>
-        <div className="previous-searches-container">
-          {searches.map((item) => {
-            return (
-              <div className="search-items" key={item}>
-                {item}
-              </div>
-            );
-          })}
-        </div>
+        <h2>
+          Mock<span>down</span> Recipes
+        </h2>
         <div className="search-bar">
           <input
             type="text"

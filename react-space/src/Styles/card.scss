@@ -1,0 +1,82 @@
+.wrapper {
+  margin: 2.5rem 0 2.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 16rem));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  overflow: hidden;
+  box-shadow: 0 5px 15px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+  width: 16rem; /* Set fixed width for each card */
+
+  &__image {
+    height: 10rem; /* Set fixed height for the image */
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  &__tag {
+    z-index: 2;
+    border-radius: 50%;
+    border: 2px solid var(--background-color);
+    height: 45px;
+    width: 45px;
+    margin: -3rem 0 0 1rem;
+  }
+
+  &__title {
+    margin-top: -1rem;
+    padding: 1rem;
+    font-size: 1.3rem; /* Optional: Adjust font size */
+    text-align: start;
+  }
+
+  &__description {
+    text-align: justify;
+    padding: 0 1rem;
+    font-size: 1rem; /* Optional: Adjust font size */ /* Optional: Center align the description */
+    span {
+      padding: 2.5rem 0 0 0.5rem;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+
+  &__btn {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--text-color);
+    transition: background 200ms ease-in, color 200ms ease-in;
+    text-align: center; /* Optional: Center align the button */
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &:hover &__btn {
+    background: var(--primary-color);
+    color: white;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper {
+    grid-template-columns: auto;
+  }
+  .card {
+    width: 20rem;
+  }
+}
