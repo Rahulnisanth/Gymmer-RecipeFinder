@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 // Icons :
-import { Menu, Close } from "../Assets/Icons";
+import { Menu, Close } from "../../Assets/Icons/index";
 // Styles :
-import "../Styles/navbar.scss";
+import "../../Styles/navbar.scss";
 
 const NavBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -26,7 +26,7 @@ const NavBar = () => {
 
   return (
     <div className="navbar">
-      <a className="nav-logo" href="#!">
+      <a className="nav-logo" href="/">
         F<span>oo</span>dies
       </a>
       {/* Desktop settings */}
