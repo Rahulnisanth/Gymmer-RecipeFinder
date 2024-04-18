@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import React, { useState } from "react";
 // Icons :
 import { Menu, Close } from "../../Assets/Icons/index";
@@ -33,7 +34,11 @@ const NavBar = () => {
       <div className="nav-links">
         {links.map((link) => {
           return (
-            <a href={link.path} key={link.name}>
+            <a
+              className={location.pathname === link.path ? "active" : ""}
+              href={link.path}
+              key={link.name}
+            >
               {link.name}
             </a>
           );
@@ -48,7 +53,11 @@ const NavBar = () => {
         <div className="sidebar">
           {links.map((link) => {
             return (
-              <a href={link.path} key={link.name}>
+              <a
+                className={location.pathname === link.path ? "active" : ""}
+                href={link.path}
+                key={link.name}
+              >
                 {link.name}
               </a>
             );
