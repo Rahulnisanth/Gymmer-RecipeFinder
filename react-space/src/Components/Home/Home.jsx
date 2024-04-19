@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home-container">
       <Hero />
       <Culinary />
-      <Quote />
+      {/* <Quote /> */}
     </div>
   );
 };
