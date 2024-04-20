@@ -1,19 +1,25 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
+// Icons :
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons/faQuoteLeft";
 // Styles :
 import "../../../Styles/hero.scss";
-import img1 from "../../../Assets/Images/img1.jpg";
+import img1 from "../../../Assets/Images/img5.jpg";
 
 const Hero = () => {
   return (
     <div className="overlay">
       <div className="contents">
         <h1>
-          About Foody<span>Freaks</span>
+          About <span>FoodyFreaks</span>
           <br /> Recipes
         </h1>
         <p>
+          <div className="quotes">
+            <FontAwesomeIcon icon={faQuoteLeft} />
+          </div>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
