@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 // Styles :
 import "../../Styles/popup.scss";
 import picture from "../../Assets/Images/img2.jpg";
 
 const PopUp = ({ recipe, togglePopup }) => {
   const {
-    image,
+    // image,
     title,
     category,
     yields,
@@ -27,11 +27,11 @@ const PopUp = ({ recipe, togglePopup }) => {
             <div className="others">
               <p>
                 {" "}
-                <strong>Yields:</strong> {yields}{" "}
+                <strong>Yields:</strong> {yields} Servings{" "}
               </p>
               <p>
                 {" "}
-                <strong>Calories:</strong> {calories}{" "}
+                <strong>Calories:</strong> {calories} / Servings{" "}
               </p>
               <p>
                 {" "}
@@ -50,14 +50,12 @@ const PopUp = ({ recipe, togglePopup }) => {
           </div>
         </div>
         <div className="main-section">
-          <ul>
-            {ingredients.map((item) => {
-              return <li id={item}>{item}</li>;
-            })}
-          </ul>
+          {ingredients.map((item) => {
+            return <p id={item}>{item}</p>;
+          })}
         </div>
         <div className="bottom">
-          <a href="#!">Instructions</a>
+          <a href="#!">view Instructions</a>
           <button onClick={togglePopup}>go back</button>
         </div>
       </div>

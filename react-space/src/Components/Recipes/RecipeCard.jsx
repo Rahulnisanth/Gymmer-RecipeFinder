@@ -11,10 +11,10 @@ const RecipeCard = ({ data }) => {
       "Enjoy this mouthwatering pasta dish made with fresh ingredients!",
     image: "https://example.com/pasta.jpg",
     category: "Italian",
-    yields: "4 servings",
-    dishType: "Main Course",
-    calories: "400 / serving",
-    healthLabels: ["Vegetarian", "Low Carb"],
+    yields: "4",
+    dishType: "Lunch/Dinner",
+    calories: "608.40",
+    healthLabels: ["Vegetarian", "LowCarb"],
     ingredients: [
       "16 ounces Firm High Protein Tofu, 16 ounces Firm High Protein Tofu",
       "16 ounces Firm High Protein Tofu, 16 ounces Firm High Protein Tofu",
@@ -23,7 +23,7 @@ const RecipeCard = ({ data }) => {
     ],
   };
 
-  const { title, description, image } = data;
+  const { title, image } = data;
   const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen((isOpen) => !isOpen);
