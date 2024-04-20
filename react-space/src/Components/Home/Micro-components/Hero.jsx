@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
+import { useNavigate } from "react-router-dom";
 // Icons :
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons/faQuoteLeft";
@@ -9,6 +10,10 @@ import "../../../Styles/hero.scss";
 import img1 from "../../../Assets/Images/img5.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const navigationHandler = () => {
+    navigate("/recipes");
+  };
   return (
     <div className="overlay">
       <div className="contents">
@@ -30,7 +35,9 @@ const Hero = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <button className="__button">Explore Recipes</button>
+        <button onClick={navigationHandler} className="__button">
+          Explore Recipes
+        </button>
       </div>
       <div className="image__section">
         <div className="image">
