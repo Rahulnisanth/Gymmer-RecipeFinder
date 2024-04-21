@@ -10,7 +10,7 @@ import picture from "../../Assets/Images/img1.jpg";
 const RecipeCard = ({ data }) => {
   const {
     label,
-    image,
+    // image,
     servings,
     url,
     healthLabels,
@@ -30,7 +30,7 @@ const RecipeCard = ({ data }) => {
       <div className="card">
         <div className="card__body">
           <img src={picture} className="card__image" alt={label} />
-          <img src={image} className="card__tag" alt={label} />
+          <img src={picture} className="card__tag" alt={label} />
         </div>
         <button onClick={togglePopup} className="card__btn">
           View Recipe

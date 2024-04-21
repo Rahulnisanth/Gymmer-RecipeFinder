@@ -8,6 +8,7 @@ import "../../Styles/recipes.scss";
 import "../../Styles/card.scss";
 
 const Recipes = () => {
+  const [searchQuery, setSearchQuery] = useState("");
   const [recipes, setRecipes] = useState([]);
   useEffect(() => {
     axios
@@ -15,12 +16,22 @@ const Recipes = () => {
       .then((response) => setRecipes(response.data))
       .catch((err) => console.log(err) || null);
   }, []);
+
+  //Search-bar optimization:
+  const onSearchFunction = (e) => {
+    const searchString = e.target.value.toLocaleLowerCase();
+    setSearchQuery(searchString);
+  };
+
+  const filterRecipes = recipes.filter((recipe) => {
+    return recipe.label.toLocaleLowerCase().includes(searchQuery);
+  });
   console.log(recipes);
   return (
     <div className="recipe-container">
-      <SearchBar />
+      <SearchBar onChangeHandler={onSearchFunction} />
       <div className="wrapper">
-        {recipes.map((recipe) => {
+        {filterRecipes.map((recipe) => {
           return <RecipeCard key={recipe._id} data={recipe} />;
         })}
       </div>

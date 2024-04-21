@@ -4,7 +4,7 @@ import "../../Styles/recipes.scss";
 // Icons :
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-const SearchBar = () => {
+const SearchBar = ({ onChangeHandler }) => {
   return (
     <>
       <div className="previous-search-section">
@@ -14,6 +14,7 @@ const SearchBar = () => {
         <div className="search-bar">
           <input
             type="text"
+            onChange={onChangeHandler}
             placeholder="Search for the recipes here..."
           ></input>
           <button className="btn">
