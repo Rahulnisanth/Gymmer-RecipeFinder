@@ -1,18 +1,20 @@
 import React from "react";
 // Styles :
 import "../../Styles/popup.scss";
-import picture from "../../Assets/Images/img2.jpg";
+// Sample-image :
+import picture from "../../Assets/Images/img1.jpg";
 
 const PopUp = ({ recipe, togglePopup }) => {
   const {
-    // image,
-    title,
-    category,
-    yields,
+    label,
+    url,
+    servings,
+    totalDaily,
+    cuisineType,
     dishType,
     calories,
     healthLabels,
-    ingredients,
+    ingredientLines,
   } = recipe;
 
   return (
@@ -23,39 +25,49 @@ const PopUp = ({ recipe, togglePopup }) => {
             <img src={picture} alt="none" />
           </div>
           <div className="top-contents">
-            <h2>{title}</h2>
             <div className="others">
-              <p>
+              <p key="1">
                 {" "}
-                <strong>Yields:</strong> {yields} Servings{" "}
+                <strong>Yields:</strong> {servings} Servings{" "}
               </p>
-              <p>
+              <p key="2">
                 {" "}
-                <strong>Calories:</strong> {calories} / Servings{" "}
+                <strong>Calories:</strong> {Math.ceil(calories)} / Servings{" "}
               </p>
-              <p>
+              <p key="3">
                 {" "}
-                <strong>Category:</strong> {category}{" "}
+                <strong>Proteins:</strong>{" "}
+                {Math.ceil(totalDaily.PROCNT.quantity)} / Servings{" "}
               </p>
-              <p>
+              <p key="4">
+                {" "}
+                <strong>Category:</strong> {cuisineType}{" "}
+              </p>
+              <p key="5">
                 {" "}
                 <strong>Dish Type:</strong> {dishType}{" "}
               </p>
             </div>
             <div className="tags">
-              {healthLabels.map((item) => {
-                return <span id={item}>#{item}</span>;
+              {healthLabels.map((item, idx) => {
+                if (idx < 3) {
+                  return <span id={item}># {item}</span>;
+                }
+                idx++;
+                return null;
               })}
             </div>
           </div>
         </div>
         <div className="main-section">
-          {ingredients.map((item) => {
+          <h2>{label}</h2>
+          {/* Ingredients */}
+          {ingredientLines.map((item) => {
             return <p id={item}>{item}</p>;
           })}
         </div>
         <div className="bottom">
-          <a href="#!">view Instructions</a>
+          <a href={url}>view Instructions</a>
           <button onClick={togglePopup}>go back</button>
         </div>
       </div>

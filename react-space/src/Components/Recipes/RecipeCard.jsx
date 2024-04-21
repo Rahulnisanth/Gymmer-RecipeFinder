@@ -1,29 +1,26 @@
+/* eslint-disable no-unused-vars */
 import { React, useState } from "react";
 // Styles :
 import "../../Styles/card.scss";
 // Popup :
 import PopUp from "./PopUp";
+// Sample-image :
+import picture from "../../Assets/Images/img1.jpg";
 
 const RecipeCard = ({ data }) => {
-  const recipe = {
-    title: "Delicious Pasta",
-    description:
-      "Enjoy this mouthwatering pasta dish made with fresh ingredients!",
-    image: "https://example.com/pasta.jpg",
-    category: "Italian",
-    yields: "4",
-    dishType: "Lunch/Dinner",
-    calories: "608.40",
-    healthLabels: ["Vegetarian", "LowCarb"],
-    ingredients: [
-      "16 ounces Firm High Protein Tofu, 16 ounces Firm High Protein Tofu",
-      "16 ounces Firm High Protein Tofu, 16 ounces Firm High Protein Tofu",
-      "16 ounces Firm High Protein Tofu, 16 ounces Firm High Protein Tofu",
-      "16 ounces Firm High Protein Tofu, 16 ounces Firm High Protein Tofu",
-    ],
-  };
+  const {
+    label,
+    image,
+    servings,
+    url,
+    healthLabels,
+    ingredientLines,
+    calories,
+    totalDaily,
+    mealType,
+  } = data;
 
-  const { title, image } = data;
+  // Popup-handler :
   const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen((isOpen) => !isOpen);
@@ -32,14 +29,13 @@ const RecipeCard = ({ data }) => {
     <div>
       <div className="card">
         <div className="card__body">
-          <img src={image} className="card__image" alt={title} />
-          <img src={image} className="card__tag" alt={title} />
-          <h2 className="card__title">{title}</h2>
+          <img src={picture} className="card__image" alt={label} />
+          <img src={image} className="card__tag" alt={label} />
         </div>
         <button onClick={togglePopup} className="card__btn">
           View Recipe
         </button>
-        {isOpen && <PopUp recipe={recipe} togglePopup={togglePopup} />}
+        {isOpen && <PopUp recipe={data} togglePopup={togglePopup} />}
       </div>
     </div>
   );
