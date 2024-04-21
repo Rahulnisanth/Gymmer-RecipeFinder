@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 // Micro-components :
 import SearchBar from "./SearchBar";
 import RecipeCard from "./RecipeCard";
@@ -7,15 +6,8 @@ import RecipeCard from "./RecipeCard";
 import "../../Styles/recipes.scss";
 import "../../Styles/card.scss";
 
-const Recipes = () => {
+const Recipes = ({ recipes }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [recipes, setRecipes] = useState([]);
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/recipes")
-      .then((response) => setRecipes(response.data))
-      .catch((err) => console.log(err) || null);
-  }, []);
 
   //Search-bar optimization:
   const onSearchFunction = (e) => {
