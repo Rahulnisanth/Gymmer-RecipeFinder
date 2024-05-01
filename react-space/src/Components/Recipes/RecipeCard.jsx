@@ -5,7 +5,7 @@ import "../../Styles/card.scss";
 // Popup :
 import PopUp from "./PopUp";
 // Sample-image :
-import picture from "../../Assets/Images/img1.jpg";
+import picture from "../../Assets/Images/img3.jpg";
 
 const RecipeCard = ({ data }) => {
   const {
@@ -30,7 +30,6 @@ const RecipeCard = ({ data }) => {
       <div className="card">
         <div className="card__body">
           <img src={picture} className="card__image" alt={label} />
-          <img src={picture} className="card__tag" alt={label} />
         </div>
         <button onClick={togglePopup} className="card__btn">
           View Recipe
