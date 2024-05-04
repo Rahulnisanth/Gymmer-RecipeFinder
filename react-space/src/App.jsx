@@ -27,17 +27,18 @@ function App() {
         setLoading(false);
       });
   }, []);
+
   return (
     <BrowserRouter>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {loading ? (
-          <Route path="/recipes" element={<Loader />} />
-        ) : (
+      {loading ? (
+        <Loader />
+      ) : (
+        <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/recipes" element={<Recipes recipes={recipes} />} />
-        )}
-      </Routes>
+        </Routes>
+      )}
     </BrowserRouter>
   );
 }

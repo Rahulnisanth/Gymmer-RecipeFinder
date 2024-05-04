@@ -3,8 +3,8 @@
   color: var(--primary-color);
   bottom: 0;
   width: 100%;
-  padding: 1.5rem 5rem;
-  background-color: var(--text-color);
+  padding: 1.8rem 5rem;
+  background-color: #fff;
   box-shadow: 0 3px 6px var(--shadow-color);
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
   .spanner {
     font-size: 0.8rem;
     letter-spacing: 0.5px;
-    color: var(--primary-color);
+    color: var(--text-light);
   }
   .__right {
     font-size: 1.2rem;
@@ -28,7 +28,7 @@
 
     .spanner {
       padding-right: 0.5rem;
-      color: var(--primary-color);
+      color: var(--text-light);
     }
     a {
       font-weight: 600;

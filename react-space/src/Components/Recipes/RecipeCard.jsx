@@ -10,7 +10,7 @@ import picture from "../../Assets/Images/img3.jpg";
 const RecipeCard = ({ data }) => {
   const {
     label,
-    // image,
+    image,
     servings,
     url,
     healthLabels,

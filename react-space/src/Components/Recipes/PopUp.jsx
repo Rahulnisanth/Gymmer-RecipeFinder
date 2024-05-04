@@ -32,12 +32,12 @@ const PopUp = ({ recipe, togglePopup }) => {
               </p>
               <p key="2">
                 {" "}
-                <strong>Calories:</strong> {Math.ceil(calories)} / Servings{" "}
+                <strong>Calories:</strong> {Math.ceil(calories)} per serving{" "}
               </p>
               <p key="3">
                 {" "}
                 <strong>Proteins:</strong>{" "}
-                {Math.ceil(totalDaily.PROCNT.quantity)} / Servings{" "}
+                {Math.ceil(totalDaily.PROCNT.quantity)} per serving{" "}
               </p>
               <p key="4">
                 {" "}
